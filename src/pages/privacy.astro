@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Corvelle - Privacy Policy"
+  description="Privacy policy for Corvelle, the iPhone app for an AI assistant you host on your own server."
+>
+  <h1>Corvelle Privacy Policy</h1>
+  <p class="meta">Effective 29 October 2026</p>
+
+  <p>
+    Corvelle is an iPhone app for chatting with an AI assistant that runs on a
+    server you control (or that someone you trust runs for you).
+    <strong>The developer collects no data about you.</strong> There are no
+    accounts with us, no analytics, no tracking, no ads, and no third-party
+    SDKs. What you send in the app goes to your own server, not to us.
+  </p>
+
+  <h2>Data we collect</h2>
+  <p>
+    None. Corvelle has no analytics, crash reporting, or tracking of any kind,
+    and it never sends your messages, reminders, calendar, or pictures to the
+    developer. The only time we receive anything from you is when you email us
+    yourself.
+  </p>
+
+  <h2>What goes to your server</h2>
+  <p>
+    Corvelle talks to one server: the broker you pair it with. The broker
+    passes your requests on to your assistant. Whoever runs that server
+    decides how long it keeps what it receives.
+  </p>
+  <ul>
+    <li>
+      <strong>When you pair:</strong> your device's name, the app version, a
+      device public key that identifies this iPhone to your server, and the
+      pairing code. The private key stays in the iPhone's Secure Enclave.
+    </li>
+    <li>
+      <strong>When you chat:</strong> your messages, your local time and time
+      zone (so "tomorrow at 9" means the right hour), and, if you have allowed
+      Reminders access, a short list of your incomplete reminders (list names,
+      titles, and due dates) so the assistant can answer questions about them.
+    </li>
+    <li>
+      <strong>Pictures you attach:</strong> only the photos, scans, or image
+      files you pick for a message, with location and other metadata removed.
+      They go to your server for that one reply and are not stored there.
+    </li>
+    <li>
+      <strong>When you confirm or decline an action:</strong> whether it
+      succeeded, and the identifier of the reminder it created.
+    </li>
+  </ul>
+
+  <h2>The AI model</h2>
+  <p>
+    Your assistant uses a large language model to answer you. Depending on how
+    your server is set up, that model may run on the server itself or at a
+    third-party AI provider chosen by whoever runs the server. In that case
+    your messages, attached pictures, and the reminder and calendar details
+    you share are sent to that provider, under its own privacy policy, and may
+    be kept in the assistant's history and memory. Corvelle shows this notice
+    before your first chat; you can read it again in Settings &rsaquo; Privacy
+    &rsaquo; AI notice.
+  </p>
+
+  <h2>Reminders and Calendar</h2>
+  <p>
+    With your permission, Corvelle reads your <em>incomplete</em> reminders to
+    show them in the app and to give the assistant the short list described
+    above. It creates a reminder only after you tap to confirm it.
+  </p>
+  <p>
+    Calendar is off until you turn it on in Settings. Then the app reads your
+    upcoming events to show them on Home. It never creates, edits, or deletes
+    an event: "Add to Calendar" opens Apple's own editor, and nothing is saved
+    unless you tap Add there.
+  </p>
+  <p>
+    <strong>Calendar for the assistant</strong> is a separate setting, also off
+    by default. When you turn it on and pick calendars, the app sends your
+    server the events of those calendars in the next 48 hours: title, start
+    and end time, whether it is all-day, and location, never notes or
+    attendees. The server keeps only the latest copy and deletes it within 48
+    hours, or at once when you turn the setting off. What the assistant has
+    already read stays in its history.
+  </p>
+
+  <h2>Camera, photos, and files</h2>
+  <p>
+    The camera is used only while you take a photo or scan a document for a
+    message. Photos and files are chosen in Apple's own pickers, so the app
+    sees only what you pick and never browses your photo library.
+  </p>
+
+  <h2>Dictation</h2>
+  <p>
+    Dictation turns your speech into text on the iPhone itself. The audio is
+    never recorded, stored, or sent anywhere. Only the text you then choose to
+    send leaves the phone, like any typed message.
+  </p>
+
+  <h2>Maps, weather, and location</h2>
+  <p>
+    The assistant can show a place on a map or the weather for a place. Your
+    iPhone asks Apple Maps or Apple Weather to draw it, so Apple receives the
+    place the card is about (not your location). Apple handles these requests
+    under <a href="https://www.apple.com/legal/privacy/">Apple's privacy
+    policy</a>.
+  </p>
+  <p>
+    Corvelle uses your location only when you tap the location button on a
+    "Weather here" card, and only once. Your location, rounded to about 1 km,
+    goes to Apple Weather for that one forecast. It is never stored, never
+    tracked in the background, and never sent to your server, your assistant,
+    or us.
+  </p>
+
+  <h2>Notifications</h2>
+  <p>
+    If you allow notifications, your server can tell you that a reply, a task
+    result, or an approval is waiting. Notifications go through Apple's push
+    service and never contain your messages. Where the App Store version uses
+    the developer's notification relay, that relay receives only your device's
+    push token, the content-free notice, and proof of your subscription, and
+    has no access to your chats or your server.
+  </p>
+
+  <h2>Data on your iPhone</h2>
+  <p>
+    Your device key and access tokens are kept in the iPhone's Keychain, on
+    this device only. A message that failed to send, or one you queued, is kept
+    in the app's private storage so you can send it later, and is deleted once
+    it is sent. Signing out deletes the tokens and device key; deleting the app
+    removes everything else.
+  </p>
+
+  <h2>Deleting your data</h2>
+  <p>
+    Sign out in Settings to unpair this iPhone and delete its credentials.
+    Anything your server or assistant has kept is under the control of whoever
+    runs that server; ask them, or delete it there yourself.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes in an important way, we will publish the new
+    version at this address with a new date.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions or concerns? Email
+    <a href="mailto:corvelle@akitaka.me">corvelle@akitaka.me</a>, or open an issue at
+    <a href="https://github.com/tarakanof/Corvelle-Site/issues">github.com/tarakanof/Corvelle-Site/issues</a>.
+  </p>
+</Base>

@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base
+  title="Corvelle - a private iPhone app for the AI assistant you host yourself"
+  description="Corvelle is a native iPhone app for chatting with an AI assistant that runs on your own server. Approve what it does, give it your reminders and calendar only when you choose, and keep your data on infrastructure you control."
+>
+  <section class="hero">
+    <h1>Your own assistant, in your pocket.</h1>
+    <p class="tagline">
+      Corvelle is a native iPhone app for the AI assistant you run on your own
+      server. Chat with it, see what it is working on, and approve what it
+      wants to do. The app talks only to your server, never to ours.
+    </p>
+    <div class="cta">
+      <a class="button primary" href={`${base}/support/`}>Support</a>
+      <a class="button" href={`${base}/privacy/`}>Privacy policy</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Chat, wherever you are</h3>
+      <p>
+        Talk to your assistant in named chats, attach a photo or a scan, or
+        dictate on the device. Replies stream in as they are written.
+      </p>
+    </div>
+    <div class="feature">
+      <h3>You approve every action</h3>
+      <p>
+        When the assistant wants to create a reminder or run a task that needs
+        your say, Corvelle asks first. Nothing happens until you tap to confirm.
+      </p>
+    </div>
+    <div class="feature">
+      <h3>Reminders and calendar, on your terms</h3>
+      <p>
+        Share your reminders and the next two days of chosen calendars with the
+        assistant only if you turn it on. Events and places open in Apple's own
+        Calendar, Maps, and Weather.
+      </p>
+    </div>
+    <div class="feature">
+      <h3>Private by design</h3>
+      <p>
+        No accounts with us, no analytics, no ads, no tracking. Your messages go
+        to the server you run, not to the developer.
+        <a href={`${base}/privacy/`}>Read the policy</a>.
+      </p>
+    </div>
+  </section>
+
+  <h2>What you need</h2>
+  <p>
+    Corvelle is a client. It needs a server you control, running the assistant
+    and the Corvelle broker that pairs your iPhone with it. You pair once, with
+    the server's address and a pairing code, and the iPhone keeps only its own
+    device key and access token. The keys to your assistant and to any AI
+    model stay on your server.
+  </p>
+
+  <style>
+    .hero { padding: 1.5rem 0 1rem; }
+    .hero h1 {
+      font-size: 2.4rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.8rem;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 38rem;
+      margin: 0 0 1.6rem;
+    }
+    .cta { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .button {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 980px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95em;
+    }
+    .button.primary {
+      background: var(--link);
+      border-color: var(--link);
+      color: #fff;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.9rem;
+      margin-top: 2.5rem;
+    }
+    .feature {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+    }
+    .feature h3 { margin: 0 0 0.4rem; }
+    .feature p { margin: 0; font-size: 0.95em; color: var(--text-secondary); }
+  </style>
+</Base>

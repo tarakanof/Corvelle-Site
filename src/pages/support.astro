@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base
+  title="Corvelle - Support"
+  description="How to get help with Corvelle: email the developer, or open an issue. Includes what to check when your iPhone will not pair with your server."
+>
+  <h1>Support</h1>
+  <p>
+    Corvelle is made by one developer. Both options below reach the same
+    person. Use whichever you prefer.
+  </p>
+
+  <h2>Email</h2>
+  <p>
+    <a href="mailto:corvelle@akitaka.me">corvelle@akitaka.me</a> - for
+    questions, bugs, and feature requests. Use email if you do not want to post
+    in public. In the app, Settings &rsaquo; About &rsaquo; Help opens a
+    message to the same address.
+  </p>
+
+  <h2>Issue tracker</h2>
+  <p>
+    <a href="https://github.com/tarakanof/Corvelle-Site/issues">github.com/tarakanof/Corvelle-Site/issues</a>
+    - public, and the better place for problems other users may also have.
+    Please do not post your server's address, pairing code, or chat content
+    there.
+  </p>
+
+  <h2>If your iPhone will not pair</h2>
+  <ul>
+    <li>
+      Corvelle needs a server you control. Check that the broker is running and
+      that its address opens over <strong>https</strong> from the iPhone's
+      network.
+    </li>
+    <li>
+      Check the pairing code. If your broker asks an operator to approve new
+      devices, the iPhone waits until the device is approved.
+    </li>
+    <li>
+      If the app was paired before, sign out in Settings and pair again.
+    </li>
+  </ul>
+
+  <h2>Reporting something the assistant showed</h2>
+  <p>
+    Answers and Home blocks are written by your assistant and the AI model it
+    uses, not by the developer. To report a block on Home, long-press it and
+    choose <em>Report this block</em>. The email names the block, never its
+    content. You can also remove it from Home in the same menu.
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    The developer never sees your chats. See the
+    <a href={`${base}/privacy/`}>privacy policy</a> for what goes where.
+  </p>
+</Base>
